@@ -23,5 +23,5 @@ jobs:
     - name: Releasing using Hub
       uses: r0user/release-apk@main
       env:
-       GITHUB_TOKEN: ${{ secrets.TOKEN }}
+       GITHUB_TOKEN: ${{ secrets.PRESS_TOKEN }}
        APP_FOLDER: app
