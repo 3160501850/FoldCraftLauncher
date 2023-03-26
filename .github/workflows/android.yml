@@ -19,9 +19,8 @@ jobs:
     - name: Make Gradle executable
       run: chmod +x ./gradlew
     - name: Build Release APK
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleDebug&&ls
     - name: Releasing using Hub
       uses: r0user/release-apk@main
       env:
        GITHUB_TOKEN: ${{ secrets.PRESS_TOKEN }}
-       APP_FOLDER: app
