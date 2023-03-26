@@ -31,7 +31,11 @@ jobs:
     - name: Make Gradle executable
 
       run: chmod +x ./gradlew
-           git init
+
+
+    - name: A fix
+
+      run: git init
     - name: Build Release APK
 
       run: ./gradlew assembleDebug
