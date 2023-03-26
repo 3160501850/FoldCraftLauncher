@@ -42,7 +42,7 @@ jobs:
 
     - name: Releasing using Hub
 
-      uses: 3160501850/release-apk@main
+      uses: r0user/release-apk@main
 
       env:
 
