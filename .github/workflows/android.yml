@@ -21,7 +21,6 @@ jobs:
     - name: Build Release APK
       run: ./gradlew assembleDebug&&ls
     - name: Create Release
-      id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,12 +30,11 @@ jobs:
         draft: false
         prerelease: true
       - name: Upload Release Asset
-        id: upload-release-asset 
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # 上传网址，无需改动
-          asset_path: FCL/build/outputs/apk/release/app-release.apk # 上传路径
-          asset_name: FCL-debug.apk # 资源名
-          asset_content_type: application/vnd.android.package-archiv #资源类型
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: FCL/build/outputs/apk/release/app-release.apk
+          asset_name: FCL-debug.apk
+          asset_content_type: application/vnd.android.package-archiv
