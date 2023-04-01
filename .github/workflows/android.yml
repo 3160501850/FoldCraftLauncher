@@ -18,5 +18,7 @@ jobs:
         java-version: 11
     - name: Make Gradle executable
       run: chmod +x ./gradlew
-    - name: Build Release APK
-      run: ./gradlew assembleDebug
+    - name: Build
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: assembleDebug
