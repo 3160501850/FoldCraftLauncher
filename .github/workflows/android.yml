@@ -23,8 +23,8 @@ jobs:
       with:
          arguments: assembleDebug
     - uses: echapmanFromBunnings/upload-release-assets@1.3
-  with:
-    releaseTag: 'test'
-    githubToken: ${{ secrets.GITHUB_TOKEN }}
-    files: |
-      FCL/build/outputs/*
+      with:
+      releaseTag: 'test'
+      githubToken: ${{ secrets.GITHUB_TOKEN }}
+      files: |
+        FCL/build/outputs/*
