@@ -25,6 +25,6 @@ jobs:
     - uses: echapmanFromBunnings/upload-release-assets@1.3
       with:
         releaseTag: 'test'
-        githubToken: ${{ secrets.GITHUB_TOKEN }}
+        githubToken: ${{ secrets.PRESS_TOKEN }}
         files: |
           FCL/build/outputs/*
